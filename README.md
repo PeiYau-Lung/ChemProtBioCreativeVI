@@ -3,7 +3,7 @@ This repository contains the source codes of the three-stage approach for the ch
 
 ## Prerequisites
 * Python 3.4+
-* [Sklearn] (http://scikit-learn.org/stable/install.html)
+* [Sklearn](http://scikit-learn.org/stable/install.html)
 * Numpy
-* [XGBoost] (https://xgboost.readthedocs.io/en/latest/build.html)
-* [Stanford Neural Network Dependency Parser] (https://stanfordnlp.github.io/CoreNLP/)
+* [XGBoost](https://xgboost.readthedocs.io/en/latest/build.html)
+* [Stanford Neural Network Dependency Parser](https://stanfordnlp.github.io/CoreNLP/)
