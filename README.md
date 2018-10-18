@@ -12,6 +12,7 @@ This repository contains the source code of the three-stage approach for the che
 Partial dataset used in the model are located in the data folder for demonstration purpose. It contains abstracts of PubMed articles, tagged chemical/protein entities and labeled relations released by the task organizers. The complete dataset, as well as the gold standard for testing set, can be found at [BiocreativeVI](http://www.biocreative.org/resources/corpora/chemprot-corpus-biocreative-vi/), or by contacting the organizers: [Martin Krallinger](krallinger.martin@gmail.com) & [Jesús Santamaría](jesus.sant@telefonica.net). 
 
 ## Usage
+In the last line of `RunParser.py`, correct the effictive path to the Stanford Neural Network Dependency Parser. Next, run the command 
 ```
 $ sh demo.sh
 ```
