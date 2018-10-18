@@ -1,0 +1,1152 @@
+# 	Protein interaction words 			
+# 	the file manually group the interaction words by their similarity			
+# 	the second column is whether the word has direction, that is, AVB is different from BVA
+# 	words that are related to interactions: expression, transcription, translation, function, activity, signaling, assembly, folding, overexpression, silencing, downregulation, upregulation etc.
+#	for example: downregulation of prot1 reduces expression of prot2
+#	Y means directed, N means undirected, S means special interaction words, such as expression, transcription...				
+#	Interaction word grouping rule		
+#	Group_number	Meaning	
+#	1	"Verb, directed, chemical modification of a protein, simple and -s form"	
+#	2	"Verb, directed, chemical modification of a protein, past form"	
+#	3	"Verb, directed, chemical modification of a protein, -ing form"	
+#	4	"Noun, directed, chemical modification of a protein"	
+#	5	"Verb, directed, modification of activity of a protein, simple and -s form"	
+#	6	"Verb, directed, modification of activity of a protein, past form"	
+#	7	"Verb, directed, modification of activity of a protein, -ing form"	
+#	8	"Noun, directed, modification of activity of a protein"	
+#	9	"Verb, undirected, physical interaction with a protein, simple and -s form"	
+#	10	"Verb, undirected, physical interaction with a protein, past form"	
+#	11	"Verb, undirected, physical interaction with a protein, -ing form"	
+#	12	"Noun, undirected, physical interaction with a protein"	
+#	13	"Verb, directed, physical interaction with a protein, simple and -s form"	
+#	14	"Verb, directed, physical interaction with a protein, past form"	
+#	15	"Verb, directed, physical interaction with a protein, -ing form"	
+#	16	"Noun, directed, physical interaction with a protein "	
+#	17	"Verb, directed, used together with words, such as expression, transcription (like, depend, affect, augment...)"	
+#	18	"Verb, directed, used together with words, such as expression, transcription"	
+#	19	"Verb, directed, used together with words, such as expression, transcription"	
+#	20	"Noun, directed, used together with words such as expression, transcription"	
+#	21	"Noun, protein or chemical names, acceptor, receptor, inhibitor, ligand..."	
+#	22	Others or unknown	
+
+# the fourth column is the label for biocreative challenge VI track V, protein-chemical interaction extraction
+# The types of protein-chemical interactions are the following
+# Group	Eval.	CHEMPROT relations belonging to this group
+# CPR:1	N     	PART_OF
+# CPR:2 N     	REGULATOR|DIRECT_REGULATOR|INDIRECT_REGULATOR
+# CPR:3 Y     	UPREGULATOR|ACTIVATOR|INDIRECT_UPREGULATOR
+# CPR:4 Y	DOWNREGULATOR|INHIBITOR|INDIRECT_DOWNREGULATOR
+# CPR:5	Y	AGONIST|AGONIST-ACTIVATOR|AGONIST-INHIBITOR
+# CPR:6	Y	ANTAGONIST
+# CPR:7	N	MODULATOR|MODULATOR-ACTIVATOR|MODULATOR-INHIBITOR
+# CPR:8	N	COFACTOR
+# CPR:9	Y	SUBSTRATE|PRODUCT_OF|SUBSTRATE_PRODUCT_OF
+# CPR:10	N	NOT
+
+abolish	Y	5	
+abolished	Y	6	
+abolishes	Y	5	
+abolishing	Y	7	
+accelerate	Y	17	
+accelerated	Y	18	
+accelerates	Y	17	
+accelerating	Y	19	
+acceleration	Y	20	
+accept	N	9
+accepted	N	10
+accepting	N	11
+acceptor	N	21	5	
+accepts	N	9	5
+acetylase	Y	21	9
+acetylases	Y	21	9
+acetylate	Y	1	9
+acetylated	Y	2	9
+acetylates	Y	1	9
+acetylating	Y	3	9
+acetylation	Y	4	9
+activate	Y	5	3	
+activated	Y	6	3
+activates	Y	5	3
+activating	Y	7	3	
+activation	Y	8	3
+activator	Y	21	3
+activators	Y	21	3
+adapter	Y	21
+adapters	Y	21
+affect	Y	17	
+affected	Y	18	
+affecting	Y	19	
+affects	Y	17
+affinity	N	12
+agonist	Y	21	5
+agonists	Y	21	5
+agonistic	Y	22	5
+aldolase	Y	21	9
+aldolases	Y	21	9
+aldolate	Y	1	9
+aldolated	Y	2	9
+aldolates	Y	1	9
+aldolating	Y	3	9
+aldolation	Y	4	9
+alter	Y	17	
+altered	Y	18	
+altering	Y	19	
+alters	Y	17
+alteration	Y	20
+alterations	Y	20
+aminase	Y	21	9
+aminases	Y	21	9
+aminate	Y	1	9
+aminated	Y	2	9
+aminates	Y	1	9
+aminating	Y	3	9
+amination	Y	4	9
+amplification	Y	8	3
+amplified	Y	18	3
+amplifies	Y	17	3
+amplify	Y	17	3
+amplifying	Y	19	3
+amylase	Y	21	9
+amylases	Y	21	9	
+amylate	Y	1	9
+amylated	Y	2	9
+amylates	Y	1	9
+amylating	Y	3	9
+amylation	Y	4	9
+anchor	Y	13	
+anchored	Y	14	
+anchoring	Y	15	
+anchors	Y	13	
+anhydrase	Y	21	9
+anhydrases	Y	21	9
+anhydrate	Y	1	9
+anhydrated	Y	2	9
+anhydrates	Y	1	9
+anhydrating	Y	3	9
+anhydration	Y	4	9
+antagonise	Y	5	6
+antagonised	Y	6	6
+antagonises	Y	5	6
+antagonising	Y	7	6
+antagonism	Y	21	6
+antagonist	Y	21	6
+antagonistic	Y	22	6
+antagonists	Y	21	6	
+antagonize	Y	5	6
+antagonized	Y	6	6
+antagonizes	Y	5	6
+antagonizing	Y	7	6
+aromatase	Y	21	9
+aromatases	Y	21	9
+aromatise	Y	1	9
+aromatised	Y	2	9
+aromatises	Y	1	9
+aromatising	Y	3	9
+aromatize	Y	1	9
+aromatized	Y	2	9
+aromatizes	Y	1	9
+aromatizing	Y	3	9
+arrest	Y	5	
+arrested	Y	6	
+arresting	Y	7	
+arrests	Y	5
+arylase	Y	21	9
+arylases	Y	21	9
+arylate	Y	1	9
+arylated	Y	2	9
+arylates	Y	1	9
+arylating	Y	3	9
+arylation	Y	4	9
+assembly	Y	16
+assist	Y	5	
+assisted	Y	6	
+assisting	Y	7	
+assists	Y	5	17
+associate	N	9	
+associated	N	10	
+associates	N	9	
+associating	N	11	
+association	N	12	
+attach	Y	13	
+attached	Y	14	
+attaches	Y	13	
+attaching	Y	15	
+attachment	Y	16	
+attack	Y	5	
+attacked	Y	6	
+attacking	Y	7	
+attacks	Y	5	
+attenuate	Y	17	
+attenuated	Y	18	
+attenuates	Y	17	
+attenuating	Y	19	
+augment	Y	17	
+augmented	Y	18	
+augmenting	Y	19	
+augments	Y	17	
+bind	N	9	5
+binding	N	11	5
+binds	N	9	5
+block	Y	5	4
+blocked	Y	6	4
+blocking	Y	7	4
+blocks	Y	5	4
+bond	N	9	
+bonded	N	10	
+bonding	N	11	
+bonds	N	9
+bound	N	9
+bounded	N	10
+bounds	N	9
+bounding	N	11	
+break	Y	1	
+breaking	Y	3	
+breaks	Y	1	
+broke	Y	2
+carbamoylase	Y	21	9
+carbamoylases	Y	21	9
+carbamoylate	Y	1	9
+carbamoylated	Y	2	9
+carbamoylates	Y	1	9
+carbamoylating	Y	3	9
+carbamoylation	Y	4	9
+carbamylase	Y	21	9
+carbamylases	Y	21	9
+carbamylate	Y	1	9
+carbamylated	Y	2	9
+carbamylates	Y	1	9
+carbamylating	Y	3	9
+carbamylation	Y	4	9
+carboxylase	Y	21	9
+carboxylases	Y	21	9
+carboxylate	Y	1	9
+carboxylated	Y	2	9
+carboxylates	Y	1	9
+carboxylating	Y	3	9
+carboxylation	Y	4	9
+carboxymethylase	Y	21	9
+carboxymethylases	Y	21	9
+carboxymethylate	Y	1	9
+carboxymethylated	Y	2	9
+carboxymethylates	Y	1	9
+carboxymethylating	Y	3	9
+carboxymethylation	Y	4	9
+catabolized	Y	2	9
+catabolizing	Y	3	9
+catalyses	Y	4	9
+catalyze	Y	1	9
+catalyzed	Y	2	9
+catalyzes	Y	1	9
+catalyzing	Y	3	9	
+cause	Y	17	
+caused	Y	18	
+causes	Y	17	
+causing	Y	19	
+change	Y	17	
+changed	Y	18	
+changes	Y	17	
+changing	Y	19	
+chelate	N	9	
+chelated	N	10	
+chelates	N	9	
+chelating	N	11	
+cleavage	Y	4	9
+cleave	Y	1	9
+cleaved	Y	2	9
+cleaves	Y	1	9
+cleaving	Y	3	9
+cluster	N	9	
+clustered	N	10	
+clustering	N	11	
+clusters	N	9
+co-distribute	N	9
+co-distributed	N	10
+co-distributes	N	9
+co-distributing	N	11
+co-distribution	N	12
+co-distributions	N	12
+co-immunoprecipitate	N	9	
+co-immunoprecipitated	N	10	
+co-immunoprecipitates	N	9	
+co-immunoprecipitating	N	11	
+co-immunoprecipitation	N	12	
+co-immunoprecipitations	N	12	
+coactivate	Y	5	3
+coactivates	Y	5	3
+coactivated	Y	6	3
+coactivating	Y	7	3
+coactivation	Y	8	3
+coactivations	Y	8	3
+coactivator	Y	21	3
+coimmunoprecipitate	N	9		
+coimmunoprecipitated	N	10	
+coimmunoprecipitates	N	9	
+coimmunoprecipitating	N	11	
+coimmunoprecipitation	N	12	
+coimmunoprecipitations	N	12	
+colocalize	N	12	
+colocalization	N	12
+colocalized	N	10
+colocalizes	N	9	
+colocalizing	N	11
+compete	Y	5
+competes	Y	5
+competing	Y	7
+competed	Y	6
+complex	N	12	5
+complexation	N	12	5
+complexed	N	10	5
+complexes	N	9	5
+complexing	N	11	5
+conjugate	N	9	5
+conjugated	N	10	5
+conjugates	N	9	5
+conjugating	N	11	5
+conjugation	N	12	5
+connect	N	9	5
+connects	N	9	5
+connected	N	10	5
+connecting	N	11	5
+connection	N	12	5
+contact	N	9	5
+contacted	N	10	5	
+contacting	N	11	5
+contacts	N	9	5
+contribute	Y	17	
+contributed	Y	18	
+contributes	Y	17	
+contributing	Y	19	
+control	Y	17	2
+controled	Y	18	2
+controlled	Y	18	2
+controlling	Y	19	2
+controls	Y	17	2
+convert	Y	1	
+converted	Y	2	
+converting	Y	3	
+converts	Y	1	
+cooperate	N	9	
+cooperated	N	10	
+cooperates	N	9	
+cooperating	N	11	
+cooperation	N	12
+coprecipitate	N	9	5
+coprecipitated	N	10	5
+coprecipitating	N	11	5
+coprecipitates	N	9	5
+coprecipitation	N	12	5
+coprecipitations	N	12	5
+co-activate	Y	5	3
+co-activates	Y	5	3
+co-activated	Y	6	3
+co-activating	Y	7	3
+co-activation	Y	8	3
+co-activations	Y	8	3
+co-activator	Y	21	3	
+co-activators	Y	21	3
+co-precipitate	N	9	
+co-precipitated	N	10	
+co-precipitating	N	11	
+co-precipitates	N	9	
+co-precipitation	N	12	
+co-precipitations	N	12	
+counterreceptor	Y	21	
+counterreceptors	Y	21	
+correlate	N	9	
+correlated	N	10	
+correlates	N	9	
+correlating	N	11	
+correlation	N	12	
+correlations	N	12
+couple	N	9
+couples	N	9
+coupled	N	10
+coupling	N	11
+cripple	Y	17	
+crippled	Y	18	
+cripples	Y	17	
+crippling	Y	19	
+cross-link	N	9	
+cross-linked	N	10	
+cross-linking	N	11	
+cross-links	N	9	
+cross-talk	N	9
+deacetylase	Y	21	9
+deacetylases	Y	21	9
+deacetylate	Y	1	9
+deacetylated	Y	2	9
+deacetylates	Y	1	9
+deacetylating	Y	3	9
+deacetylation	Y	4	9
+deactivate	Y	5	4
+deactivated	Y	6	4
+deactivates	Y	5	4
+deactivating	Y	7	4
+deactivation	Y	8	4
+deactivator	Y	21	4
+deactivators	Y	21	4
+deamidase	Y	21	9
+deamidases	Y	21	9
+deamidate	Y	1	9
+deamidated	Y	2	9
+deamidates	Y	1	9
+deamidating	Y	3	9
+deamidation	Y	4	9
+deaminase	Y	21	9
+deaminases	Y	21	9
+deaminate	Y	1	9
+deaminated	Y	2	9
+deaminates	Y	1	9
+deaminating	Y	3	9
+deamination	Y	4	9
+decarboxylase	Y	21	9
+decarboxylases	Y	21	9
+decarboxylate	Y	1	9
+decarboxylated	Y	2	9
+decarboxylates	Y	1	9
+decarboxylating	Y	3	9
+decarboxylation	Y	4	9
+decrease	Y	17	4
+decreased	Y	18	4
+decreases	Y	17	4
+decreasing	Y	19	4
+degrade	Y	1	4
+degraded	Y	2	4
+degrades	Y	1	4
+degradation	Y	4	4
+degrading	Y	3	4
+dehydrase	Y	21	9
+dehydrases	Y	21	9
+dehydrate	Y	1	9	
+dehydrated	Y	2	9
+dehydrates	Y	1	9
+dehydrating	Y	3	9
+dehydration	Y	4	9
+dehydrogenase	Y	21	9
+dehydrogenases	Y	21	9
+dehydrogenate	Y	1	9
+dehydrogenated	Y	2	9
+dehydrogenates	Y	1	9
+dehydrogenating	Y	3	9
+dehydrogenation	Y	4	9
+denature	Y	1	4
+denatured	Y	2	4
+denatures	Y	1	4
+denaturing	Y	3	4
+deiodinate	Y	1	9
+deiodinated	Y	2	9
+deiodinates	Y	1	9
+deiodinating	Y	3	9
+deiodination	Y	4	9
+deiodinations	Y	4	9
+deiodinase	Y	21	9
+deiodinases	Y	21	9
+depend	S	17	5
+depended	S	18	
+dependent	S	19	
+depending	S	19	
+depends	S	17	5
+dephosphorylase	Y	21	9
+dephosphorylases	Y	21	9
+dephosphorylate	Y	1	9
+dephosphorylated	Y	2	9	
+dephosphorylates	Y	1	9
+dephosphorylating	Y	3	9
+dephosphorylation	Y	4	9
+deplete	Y	5	4
+depleted	Y	6	4
+depletes	Y	5	4
+depleting	Y	7	4
+depress	Y	5	4	
+depressed	Y	6	4
+depresses	Y	5	4
+depressing	Y	7	4
+derepress	Y	5	4
+derepressed	Y	6	4
+derepresses	Y	5	4
+derepressing	Y	7	4
+derepression	Y	8	4
+derepressor	Y	21	4
+derepressors	Y	21	4
+destruct	Y	1	
+destructed	Y	2	
+destructing	Y	3	
+destructs	Y	1	
+detach	Y	1	
+detached	Y	2	
+detaches	Y	1	
+detaching	Y	3	
+dimerise	N	9	
+dimerised	N	10	
+dimerises	N	9	
+dimerising	N	11	
+dimerize	N	9	
+dimerized	N	10	
+dimerizes	N	9	
+dimerizing	N	11	
+diminish	Y	5	4
+diminished	Y	6	4
+diminishes	Y	5	4
+diminishing	Y	7	4
+discharge	Y	5	
+discharged	Y	6	
+discharges	Y	5	
+discharging	Y	7	
+dismutate	Y	1	
+dismutated	Y	2	
+dismutates	Y	1	
+dismutating	Y	3	
+dismutation	Y	4	
+disrupt	Y	17	5
+disrupted	Y	18	
+disrupting	Y	19	
+disruption	Y	20	
+disrupts	Y	17	
+dissociate	N	9	
+dissociated	N	10	
+dissociates	N	9	
+dissociating	N	11	
+dissociation	N	12	
+dock	Y	13	5
+docked	Y	14	5
+docking	Y	15	5
+docks	Y	13	5
+downregulate	Y	5	4
+down-regulate	Y	5	4
+downregulated	Y	6	4
+down-regulated	Y	6	4
+downregulates	Y	5	4
+down-regulates	Y	5	4
+downregulating	Y	7	4
+down-regulating	Y	7	4
+downregulation	Y	8	4
+down-regulation	Y	8	4
+downregulator	Y	21	4
+downregulators	Y	21	4
+down-regulator	Y	21	4
+down-regulators	Y	21	4
+effect	Y	17
+effected	Y	18
+effects	Y	17
+effector	Y	21
+effectors	Y	21
+elevate	Y	17	3
+elevated	Y	18	3
+elevates	Y	17	3
+elevating	Y	19	3
+eliminate	Y	5	
+eliminated	Y	6	
+eliminates	Y	5	
+eliminating	Y	7	
+elimination	Y	8	
+encode	Y	5	
+encoded	Y	6	
+encoding	Y	7	
+encodes	Y	5	
+enhance	Y	17	3
+enhanced	Y	18	3
+enhancement	Y	20	3
+enhancer	Y	21	3
+enhances	Y	17	3
+enhancing	Y	19	3
+epimerase	Y	21
+epimerases	Y	21
+epimerise	Y	1	
+epimerised	Y	2	
+epimerises	Y	1	
+epimerising	Y	3	
+epimerize	Y	1	
+epimerized	Y	2	
+epimerizes	Y	1	
+epimerizing	Y	3
+ethylase	Y	21	9
+ethylases	Y	21	9
+ethylate	Y	1	9	
+ethylated	Y	2	9
+ethylates	Y	1	9
+ethylating	Y	3	9
+ethylation	Y	4	9
+evoke	Y	5	4
+evoked	Y	6	4
+evokes	Y	5	4
+evoking	Y	7	4
+express	S	22	
+expressed	S	22
+expresses	S	22
+expressing	S	22
+expression	S	22
+expressions	S	22
+facilitate	Y	17	
+facilitated	Y	18	
+facilitates	Y	17	
+facilitating	Y	19
+formylase	Y	21	9
+formylases	Y	21	9
+formylate	Y	1	9
+formylated	Y	2	9
+formylates	Y	1	9
+formylating	Y	3	9
+formylation	Y	4	9
+fusion	N	12	
+glycosylase	Y	21	9
+glycosylases	Y	21	9
+glycosylate	Y	1	9
+glycosylated	Y	2	9
+glycosylates	Y	1	9
+glycosylating	Y	3	9
+glycosylation	Y	4	9
+hasten	Y	17
+hastened	Y	18
+hastening	Y	19
+hastens	Y	17
+heterodimer	N	21	
+heterodimerization	N	12	
+heterodimerize	N	9	
+heterodimerized	N	10	
+heterodimerizes	N	9	
+heterodimerizing	N	11	
+heterodimers	N	21
+heteropentamer	N	21
+heteropentamers	N	21	
+homodimer	N	21	
+homodimerization	N	12	
+homodimerize	N	9	
+homodimerized	N	10	
+homodimerizes	N	9	
+homodimers	N	21
+hydrase	Y	21	9
+hydrases	Y	21	9
+hydrate	Y	1	9
+hydrated	Y	2	9
+hydrates	Y	1	9
+hydrating	Y	3	9
+hydration	Y	4	9
+hydrogenase	Y	21	9
+hydrogenases	Y	21	9
+hydrogenate	Y	1	9
+hydrogenated	Y	2	9
+hydrogenates	Y	1	9
+hydrogenating	Y	3	9
+hydrogenation	Y	4	9
+hydrolase	Y	21	9
+hydrolases	Y	21	9
+hydrolyse	Y	1	9
+hydrolysed	Y	2	9
+hydrolyses	Y	1	9
+hydrolysing	Y	3	9
+hydrolysis	Y	4	9
+hydrolyze	Y	1	9
+hydrolyzed	Y	2	9
+hydrolyzes	Y	1	9
+hydrolyzing	Y	3	9
+hydroxylase	Y	21	9
+hydroxylases	Y	21	9
+hydroxylate	Y	1	9	
+hydroxylated	Y	2	9
+hydroxylates	Y	1	9
+hydroxylating	Y	3	9
+hydroxylation	Y	4	9
+hydroxymethylase	Y	21	9
+hydroxymethylases	Y	21	9
+hydroxymethylate	Y	1	9
+hydroxymethylated	Y	2	9
+hydroxymethylates	Y	1	9
+hydroxymethylating	Y	3	9
+hydroxymethylation	Y	4	9
+immunolocalization	N	12
+immunolocalizations	N	12
+immunolocalize	N	9
+immunolocalizes	N	9
+immunolocalized	N	10
+immunolocalizing	N	11
+immunoprecipitate	N	9
+immunoprecipitates	N	9
+immunoprecipitating	N	11
+immunoprecipitated	N	10
+immunoprecipitation	N	12
+immunoprecipitations	N	12
+impact	Y	17
+impacted	Y	18
+impacting	Y	19
+impacts	Y	17
+impair	Y	17	4
+impaired	Y	18	4
+impairing	Y	19	4
+impairs	Y	17	4
+inactivate	Y	5	4
+inactivated	Y	6	4
+inactivates	Y	5	4
+inactivating	Y	7	4
+inactivation	Y	8	4
+incite	Y	5	
+incited	Y	6	
+incites	Y	5	
+inciting	Y	7	
+increase	Y	17	3
+increased	Y	18	3
+increases	Y	17	3
+increasing	Y	19	3
+induce	Y	17
+induced	Y	18
+induces	Y	17
+inducing	Y	19
+induction	Y	8	
+influence	Y	17
+influenced	Y	18
+influences	Y	17
+influencing	Y	19
+inhibit	Y	5	4	
+inhibited	Y	6	4	
+inhibiting	Y	7	4
+inhibition	Y	8	4
+inhibitor	Y	21	4
+inhibitors	Y	21	4
+inhibits	Y	5	4
+inhibitory	Y	7	4
+initiate	Y	17	3
+initiated	Y	18	3
+initiates	Y	17	3
+initiating	Y	19	3
+inject	Y	13
+injected	Y	14
+injecting	Y	15
+injects	Y	13
+interact	N	9	5
+interacted	N	10	5
+interacting	N	11	5
+interaction	N	12	5
+interactions	N	12	5
+interacts	N	9	5
+interfere	Y	17	4
+interfered	Y	18	4
+interference	Y	3	4
+interferes	Y	17	4
+interferring	Y	4	4
+iodinase	Y	21	9
+iodinases	Y	21	9
+iodinate	Y	1	9
+iodinated	Y	2	9
+iodinates	Y	1	9
+iodinating	Y	3	9
+isomerase	Y	21
+isomerases	Y	21	
+isomerise	Y	1	
+isomerised	Y	2	
+isomerises	Y	1	
+isomerising	Y	3	
+isomerisation	Y	4	
+isomerization	Y	4	
+isomerize	Y	1	
+isomerized	Y	2	
+isomerizes	Y	1	
+isomerizing	Y	3	
+ligand	Y	21	5	
+ligands	Y	21	5
+ligase	Y	21	9
+ligases	Y	21	9
+ligate	Y	13	9
+ligated	Y	14	9
+ligates	Y	13	9
+ligating	Y	15	9
+ligation	Y	16	9
+link	N	13	
+linkage	N	16	
+linked	N	14	
+linking	N	15	
+links	N	13	
+localise	Y	13	
+localised	Y	14	
+localises	Y	13	
+localising	Y	15	
+localize	Y	13	
+localized	Y	14	
+localizes	Y	13	
+localizing	Y	15	
+lower	Y	17	4
+lowered	Y	18	4
+lowering	Y	19	4
+lowers	Y	17	4
+mediate	Y	17
+mediated	Y	18
+mediates	Y	17
+mediating	Y	19
+mediation	Y	20
+methylase	Y	21	9
+methylases	Y	21	9
+methylate	Y	1	9
+methylated	Y	2	9
+methylates	Y	1	9
+methylating	Y	3	9
+methylation	Y	4	9
+mobilise	Y	5	
+mobilised	Y	6	
+mobilises	Y	5	
+mobilising	Y	7	
+mobilize	Y	5	
+mobilized	Y	6	
+mobilizes	Y	5	
+mobilizing	Y	7	
+moderate	Y	17
+moderated	Y	18
+moderates	Y	17
+moderating	Y	19
+moderation	Y	20
+modification	Y	4
+modifications	Y	4
+modified	Y	2
+modifies	Y	1
+modify	Y	1
+modifying	Y	3
+modulate	Y	17	7
+modulated	Y	18	7
+modulates	Y	17	7
+modulating	Y	19	7
+modulator	Y	21	7
+modulators	Y	21	7
+modulation	Y	4	7
+mutant	Y	21
+mutants	Y	21
+mutate	Y	1	
+mutated	Y	2	
+mutates	Y	1	
+mutating	Y	3	
+mutation	Y	4	
+mutations	Y	4	
+neutralise	Y	5	
+neutralised	Y	6	
+neutralises	Y	5	
+neutralising	Y	7	
+neutralize	Y	5	
+neutralized	Y	6	
+neutralizes	Y	5	
+neutralizing	Y	7	
+nitritate	Y	1	9
+nitritated	Y	2	9
+nitritates	Y	1	9
+nitritating	Y	3	9
+nitritation	Y	4	9
+nitrogenase	Y	21	9
+nitrogenases	Y	21	9
+nitrogenate	Y	1	9
+nitrogenated	Y	2	9
+nitrogenates	Y	1	9
+nitrogenating	Y	3	9
+nitrogenation	Y	4	9
+nucleate	N	9	
+nucleated	N	10	
+nucleates	N	9	
+nucleating	N	11	
+nucleation	N	12	
+obstruct	Y	5	4
+obstructed	Y	6	4
+obstructing	Y	7	4
+obstruction	Y	8	4
+obstructs	Y	5	4
+oxidase	Y	21	9
+oxidases	Y	21	9
+oxidise	Y	1	9
+oxidised	Y	2	9	
+oxidises	Y	1	9
+oxidising	Y	3	9
+oxidization	Y	4	9
+oxidize	Y	1	9
+oxidized	Y	2	9
+oxidizes	Y	1	9
+oxidizing	Y	3	9
+oxygenase	Y	21	9
+oxygenases	Y	21	9
+oxygenate	Y	1	9
+oxygenated	Y	2	9
+oxygenates	Y	1	9
+oxygenating	Y	3	9
+oxygenation	Y	4	9
+pair	N	9	
+paired	N	10	
+pairing	N	11	
+pairs	N	9
+partner	N	9
+partners	N	9
+peptidase	Y	21
+peptidases	Y	21
+peptidate	Y	1	
+peptidated	Y	2	
+peptidates	Y	1	
+peptidating	Y	3	
+peptidation	Y	4	
+peroxidization	Y	4	9
+peroxidize	Y	1	9
+peroxidized	Y	2	9
+peroxidizes	Y	1	9
+peroxidizing	Y	3	9
+perturb	Y	17
+perturbation	Y	20
+perturbed	Y	18
+perturbing	Y	19
+perturbs	Y	17
+phosphorylase	Y	21	9
+phosphorylases	Y	21	9
+phosphorylate	Y	1	9
+phosphorylated	Y	2	9
+phosphorylates	Y	1	9
+phosphorylating	Y	3	9
+phosphorylation	Y	4	9
+phosphatase	Y	21	9
+phosphatases	Y	21	9
+polymerise	N	9	
+polymerised	N	10
+polymerises	N	9
+polymerising	N	11
+polymerize	N	9
+polymerized	N	10
+polymerizes	N	9
+polymerizing	N	11
+polymerization	N	12
+potentiate	Y	17	3
+potentiated	Y	18	3
+potentiates	Y	17	3
+potentiating	Y	19	3
+potentiation	Y	20	3
+precipitate	N	9	
+precipitated	N	10	
+precipitates	N	9	
+precipitating	N	11	
+precipitation	N	12	
+prevent	Y	17	4	5
+prevented	Y	18	4	6
+preventing	Y	19	4	7
+prevention	Y	20	4	8
+prevents	Y	17	4	5
+promoter	Y	21
+promoters	Y	21
+promote	Y	5	3
+promoted	Y	6	3
+promotes	Y	5	3
+promoting	Y	7	3
+promotion	Y	8	3
+proteolase	Y	21	9
+proteolases	Y	21	9
+proteolyse	Y	1	9
+proteolysed	Y	2	9
+proteolyses	Y	1	9
+proteolysing	Y	3	9
+proteolyze	Y	1	9
+proteolyzed	Y	2	9
+proteolyzes	Y	1	9
+proteolyzing	Y	3	9
+proteolysis	Y	4	9
+provoke	Y	5
+provoked	Y	6
+provokes	Y	5
+provoking	Y	7
+react	N	9	
+reacted	N	10	
+reacting	N	11	
+reaction	N	12	
+reacts	N	9	
+receptor	Y	21	
+receptors	Y	21
+recognise	Y	13	
+recognised	Y	14	
+recognises	Y	13	
+recognising	Y	15	
+recognization	Y	16	
+recognize	Y	13	
+recognized	Y	14	
+recognizes	Y	13	
+recognizing	Y	15	
+recruit	Y	13	
+recruited	Y	14	
+recruiting	Y	15
+recruitment	Y	16	
+recruits	Y	13	
+reduce	Y	1	4
+reduced	Y	2	4
+reduces	Y	1	4
+reducing	Y	3	4
+reduction	Y	4	4
+reductase	Y	21	9
+reductases	Y	21	9
+regulate	Y	5	2	
+regulated	Y	6	2
+regulates	Y	5	2
+regulating	Y	7	2
+regulation	Y	8	2
+regulations	Y	8	2
+regulator	Y	21	2
+regulators	Y	21	2
+related	N	10
+relationship	N	12
+release	Y	5	
+released	Y	6	
+releases	Y	5	
+releasing	Y	7	
+removal	Y	8	4	
+remove	Y	5	4
+removed	Y	6	4
+removes	Y	5	4
+removing	Y	7	4
+repair	Y	1	
+repaired	Y	2	
+repairing	Y	3	
+repairs	Y	1	
+repress	Y	5	4
+repressed	Y	6	4
+represses	Y	5	4
+repressing	Y	7	4
+repression	Y	8	4
+repressor	Y	21	4
+repressors	Y	21	4
+response	Y	5
+responsible	Y	7
+restrict	Y	5	
+restricted	Y	6	
+restricting	Y	7	
+restriction	Y	8	
+restricts	Y	5
+ribonuclease	Y	21	9
+ribonucleases	Y	21	9
+ribonucleate	Y	1	9
+ribonucleated	Y	2	9
+ribonucleates	Y	1	9
+ribonucleating	Y	3	9
+ribonucleation	Y	4	9
+s-carboxymethylase	Y	21	9
+s-carboxymethylases	Y	21	9
+s-carboxymethylate	Y	1	9
+s-carboxymethylated	Y	2	9
+s-carboxymethylates	Y	1	9
+s-carboxymethylating	Y	3	9
+s-carboxymethylation	Y	4	9
+sequester	Y	5	4
+sequestered	Y	6	4
+sequestering	Y	7	4
+sequesters	Y	5	4
+sever	Y	13	10
+severed	Y	14	10
+severing	Y	15	10
+severs	Y	13	10
+silence	Y	5	4
+silenced	Y	6	4
+silences	Y	5	4
+silencing	Y	7	4
+splice	Y	1	
+spliced	Y	2	
+splices	Y	1	
+splicing	Y	3	
+stabilise	Y	13	
+stabilised	Y	14	
+stabilises	Y	13	
+stabilising	Y	15	
+stabilization	Y	16	
+stabilize	Y	13	
+stabilized	Y	14	
+stabilizes	Y	13	
+stabilizing	Y	15	
+stimulate	Y	5	3
+stimulated	Y	6	3
+stimulates	Y	5	3
+stimulating	Y	7	3
+stimulation	Y	8	3
+substrate	Y	21	9
+substrates	Y	21	9
+substitute	Y	13
+substituted	Y	14	
+substitutes	Y	13	
+substituting	Y	15	
+substitution	Y	16
+sumoylase	Y	21	9
+sumoylases	Y	21	9
+sumoylate	Y	1	9
+sumoylated	Y	2	9
+sumoylates	Y	1	9
+sumoylating	Y	3	9
+sumoylation	Y	4	9
+suppress	Y	5	4
+suppressed	Y	6	4
+suppresses	Y	5	4
+suppressing	Y	7	4
+suppression	Y	8	4
+synergise	N	9	
+synergised	N	10	
+synergises	N	9	
+synergising	N	11	
+synergize	N	9	
+synergized	N	10	
+synergizes	N	9	
+synergizing	N	11	
+target	Y	21	
+targeted	Y	14	
+targeting	Y	15	
+targets	Y	21	
+tether	Y	13	
+tethered	Y	14	
+tethering	Y	15	
+tethers	Y	13	
+transactivate	Y	5	
+transactivated	Y	6	
+transactivates	Y	5	
+transactivating	Y	7	
+transactivation	Y	8
+transaminase	Y	21	9
+transaminases	Y	21	9
+transaminate	Y	1	9
+transaminated	Y	2	9
+transaminates	Y	1	9
+transaminating	Y	3	9
+transamination	Y	4	9
+transcribe	S	13	
+transcribed	S	14	
+transcribes	S	13	
+transcribing	S	15	
+transcription	S	16	
+transcriptions	S	16	
+transduce	Y	5	
+transduced	Y	6	
+transduces	Y	5	
+transducing	Y	7	
+transduction	Y	8	
+transfer	Y	13	
+transferation	Y	16	
+transferred	Y	14	
+transferring	Y	15	
+transferrs	Y	13	
+transport	Y	13	
+transportation	Y	16	
+transported	Y	14	
+transporting	Y	15	
+transports	Y	13	
+transportor	Y	21	
+trap	Y	13
+trapping	Y	15
+trigger	Y	3	3	
+triggered	Y	6	3	
+triggering	Y	7	3
+triggers	Y	5	3
+truncate	Y	1	4
+truncated	Y	2	4
+truncates	Y	1	4
+truncating	Y	3	4
+truncation	Y	4	4
+ubiquitinase	Y	21
+ubiquitinases	Y	21
+ubiquitinate	Y	1	
+ubiquitinated	Y	2	
+ubiquitinates	Y	1	
+ubiquitinating	Y	3	
+ubiquitination	Y	4	
+upregulate	Y	5	3	
+up-regulate	Y	5	3
+upregulated	Y	6	3
+up-regulated	Y	6	3
+upregulates	Y	5	3
+up-regulates	Y	5	3
+upregulating	Y	7	3
+up-regulating	Y	7	3
+upregulation	Y	8	3
+up-regulation	Y	8	3
+upregulations	Y	8	3
+up-regulations	Y	8	3
+upregulator	Y	21	3
+upregulators	Y	21	3
+up-regulator	Y	21	3
+up-regulators	Y	21	3	
